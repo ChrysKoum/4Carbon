@@ -5,10 +5,10 @@ import BrandFour from '../images/brand/brand-04.svg';
 import BrandFive from '../images/brand/brand-05.svg';
 
 const TableOne = () => {
-  const [hoveredFee, setHoveredFee] = useState(null);
+  const [hoveredFee, setHoveredFee] = useState<number | null>(null);
 
   // Function to calculate 5% of a number
-  const calculateFivePercent = (amount) => (amount * 0.05).toFixed(2);
+  const calculateFivePercent = (amount: number) => (amount * 0.05).toFixed(2);
 
   // Fees data
   const fees = [
