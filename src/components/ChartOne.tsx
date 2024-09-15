@@ -8,7 +8,7 @@ const options: ApexOptions = {
     position: 'top',
     horizontalAlign: 'left',
   },
-  colors: ['#3C50E0', '#80CAEE', '#FF4560'], // Add a third color for Total Profit
+  colors: ['#3C50E0', '#80CAEE', '#FF4560'],
   chart: {
     fontFamily: 'Satoshi, sans-serif',
     height: 335,
@@ -44,7 +44,7 @@ const options: ApexOptions = {
     },
   ],
   stroke: {
-    width: [2, 2, 2], // Ensure stroke width applies to three series
+    width: [2, 2, 2],
     curve: 'straight',
   },
   grid: {
@@ -65,7 +65,7 @@ const options: ApexOptions = {
   markers: {
     size: 4,
     colors: '#fff',
-    strokeColors: ['#3056D3', '#80CAEE', '#FF4560'], // Three series markers
+    strokeColors: ['#3056D3', '#80CAEE', '#FF4560'],
     strokeWidth: 3,
     strokeOpacity: 0.9,
     strokeDashArray: 0,
@@ -89,10 +89,17 @@ const options: ApexOptions = {
         fontSize: '0px',
       },
     },
-    min: 0, // Set minimum y-axis value to 0
-    max: 1400000, // Adjust based on your highest Total Profit value
+    min: 0,
+    max: 1400000,
+    labels: {
+      formatter: function (value) {
+        return (value / 1000000).toFixed(2) + 'M';  // Converts large numbers to "M" notation
+      },
+    },
   },
 };
+
+
 
 interface ChartOneState {
   series: {
