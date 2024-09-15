@@ -5,7 +5,7 @@ import os
 import leafmap.foliumap as leafmap
 import folium
 
-GOOGLE_MAPS_API_KEY = "AIzaSyDZtmn2wbMUjS3SaEsXwnTc5q_N1rZZBTs"
+GOOGLE_MAPS_API_KEY = your_api
 # set up client
 client = Client(key=GOOGLE_MAPS_API_KEY)
 # a location in Los Angeles, CA
