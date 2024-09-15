@@ -1,5 +1,4 @@
 import 'jsvectormap/dist/css/jsvectormap.css';
-import '../js/us-aea-en';
 import greeceMap from '../images/greece_map.png';
 
 
